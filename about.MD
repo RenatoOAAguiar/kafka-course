@@ -92,6 +92,11 @@
 8. Go to config folder, opzen server.properties
 9. Change log.dirs to kafka data folder, already created
 
+**Start**
+
+1. `zookeeper-server-start kafka_2.12-2.0.0\config\zookeeper.properties`
+2. ``
+
 
 **CLI**
 
@@ -121,7 +126,40 @@
 
 
 
-**Twitter example*
+**Twitter example**
 
 1. Developer account
+2. Java Code to retrieve from webhook twitter, all messages pass on listener will be send to a producer
+3. The code send by producer will be listened by consumer
+4. Consumer can be save on disk, save on database, process in real time, etc
 
+
+**ELK**
+
+1. Use at least once, if goes wrong try send again.
+
+
+**Extends APIs**
+
+1. Usgin connector for kafka
+2. Twitter connector is an example
+
+**Kafka Streams**
+
+1. Data processing and transformation library within kafka
+2. Fraud Detection
+3. Monitoring and alerting
+4. https://medium.com/@stephane.maarek/the-kafka-api-battle-producer-vs-consumer-vs-kafka-connect-vs-kafka-streams-vs-ksql-ef584274c1e
+
+
+
+**Others**
+
+1. Message Compression
+2. Replication factor should be at least 2, usually 3, maximum 4
+3. Never set to 1 in production
+4. https://medium.com/@criccomini/how-to-paint-a-bike-shed-kafka-topic-naming-conventions-1b7259790073
+5. Connector to read direct from database
+6. https://kafka.apache.org/documentation/#monitoring
+7. https://docs.confluent.io/platform/current/kafka/monitoring.html
+8. https://www.datadoghq.com/blog/monitoring-kafka-performance-metrics/
