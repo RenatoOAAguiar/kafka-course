@@ -163,3 +163,8 @@
 6. https://kafka.apache.org/documentation/#monitoring
 7. https://docs.confluent.io/platform/current/kafka/monitoring.html
 8. https://www.datadoghq.com/blog/monitoring-kafka-performance-metrics/
+9. `kafka-configs --add-config`
+10. log.retention.hours, number of hours to keep data for default is 168(one week)
+11. log compact, mantain only the last key
+12. `kafka-topics --zookeeper 127.0.0.1:2181 --create --topic employee-salary --partitions 1 --replication-factor 1 --config cleanup.policy=compact --config min.cleanable.dirty.ration=0.001 --config segment.ms=5000`
+13. Using docker kafka-stack-docker-compose
